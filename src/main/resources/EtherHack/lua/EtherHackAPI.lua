@@ -31,6 +31,11 @@ EtherHack.API = {
         return getSandboxOptions():getOptionByName("MultiHitZombies"):getValue();
     end,
 
+    toggleBrushTool = function(changeOptionTarget, joypadIndex, isSelected)
+        if not isEtherInGame() or getPlayer() == nil then return end
+        BrushToolManager.cheat = selected;
+    end,
+	
     -- Изменение состояние режима мультиудара
     toggleMultiHitZombies = function(changeOptionTarget, joypadIndex, isSelected)
         getSandboxOptions():set("MultiHitZombies", isSelected);
