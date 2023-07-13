@@ -102,6 +102,7 @@ function EtherMain:createChildren()
     ISCollapsableWindow.createChildren(self);
 
     self:addVerticalCheckBox("Debug Mode Bypass","DebugModeBypass", EtherHack.API.setDebugBypass, EtherHack.API.isEtherBypassDebugMode() or false, false);
+    self:addVerticalCheckBox("Brush Tool","BrushTool", EtherHack.API.setDebugBypass, EtherHack.API.toggleBrushTool() or false, false);	
     self:addVerticalCheckBox("MultiHit Zombies","MultiHitZombies", EtherHack.API.toggleMultiHitZombies, getPlayer() and EtherHack.API.isMultiHitZombies() or false, true);
     self:addVerticalCheckBox("Invisible","Invisible", EtherHack.API.toggleInvisible, getPlayer() and getPlayer():isInvisible() or false, true);
     self:addVerticalCheckBox("God Mode", "GodMode", EtherHack.API.toggleGodMode, getPlayer() and getPlayer():isGodMod() or false, true);
